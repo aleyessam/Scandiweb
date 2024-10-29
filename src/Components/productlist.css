@@ -1,0 +1,147 @@
+.prodlist h1 {
+  font-family: "Montserrat Light", "Microsoft YaHei", "Helvetica Neue",
+    Helvetica, "PingFang SC", "Hiragino Sans GB", "微软雅黑", Arial, sans-serif;
+}
+
+.product-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  font-family: "Montserrat Light", "Microsoft YaHei", "Helvetica Neue",
+    Helvetica, "PingFang SC", "Hiragino Sans GB", "微软雅黑", Arial, sans-serif;
+}
+
+.product-card {
+  position: relative; /* Ensure this is relative for absolute positioning of the checkbox */
+  border: 2px solid black;
+  padding: 20px 30px 30px 30px;
+  margin: 20px;
+  margin-left: 150px;
+  width: 200px;
+  border-radius: 8px;
+  max-height: 120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card h2 {
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+
+/* Add the checkbox styles */
+.delete-checkbox {
+  position: absolute;
+  top: 10px; /* Position 10px from the top */
+  left: 10px; /* Position 10px from the left */
+  transform: scale(1.5); /* Optional: scale to make the checkbox larger */
+}
+
+h1 {
+  margin-left: 50px;
+}
+
+.prodlist .line {
+  height: 2px;
+  background-color: black; /* Use background-color for the line's color */
+  border: none; /* Remove any default border */
+  width: 95%; /* Make the line stretch the full width of the container */
+  margin-left: 30px;
+}
+
+.add-button {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  margin-right: 250px;
+  padding: 13px; /* Increase the padding to make the button larger */
+  font-size: 18px; /* Increase the font size for a larger button appearance */
+  width: 160px; /* You can set a fixed width or let it adjust to content */
+  background-color: #007bff; /* Example background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+#delete-product-btn {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  margin-right: 60px;
+  padding: 13px; /* Increase the padding to make the button larger */
+  font-size: 18px; /* Increase the font size for a larger button appearance */
+  width: 160px; /* You can set a fixed width or let it adjust to content */
+  background-color: #007bff; /* Example background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+}
+
+#delete-product-btn:hover {
+  background-color: red;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Ensure footer spans the full width of the page */
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f1f1f1; /* Light background for contrast */
+  color: #333; /* Dark color for text */
+}
+
+.footer-line {
+  width: 80%;
+  height: 1px;
+  background-color: #ccc; /* Light gray line */
+  margin: 0 auto 10px; /* Center line and add spacing */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: black; /* Gray text */
+}
+
+.no-products {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.no-products p {
+  /* margin-bottom: 15px; */
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.add-new-product {
+  padding: 13px 50px;
+  font-size: 23px;
+  background-color: #007bff; /* Customize button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-new-product:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
