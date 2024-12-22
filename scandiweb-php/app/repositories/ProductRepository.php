@@ -14,8 +14,36 @@ class ProductRepository {
         $query = "SELECT id, sku, name, price, type, size, weight, height, width, length FROM products";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
+        
+        // Get all products
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Attach specific attributes based on the product type
+        foreach ($products as &$product) {
+            $product['attributes'] = $this->getAttributesForProductType($product);
+        }
+
+        return $products;
+    }
+
+    private function getAttributesForProductType($product) {
+        // Check the product type and return the appropriate attributes
+        switch ($product['type']) {
+            case 'Furniture':
+                return [
+                    'dimensions' => "{$product['height']} x {$product['width']} x {$product['length']}"
+                ];
+            case 'Book':
+                return [
+                    'weight' => "{$product['weight']} KG"
+                ];
+            case 'DVD':
+                return [
+                    'size' => "{$product['size']} GB"
+                ];
+            default:
+                return [];
+        }
     }
 
     public function add(array $productData) {
